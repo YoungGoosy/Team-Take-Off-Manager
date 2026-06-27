@@ -3,32 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TEAM TAKE OFF | Valorant Tactical Commander</title>
+  <title>TEAM TAKE OFF | Tactical Commander</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
 
   <header class="hero">
     <div>
-      <p class="eyebrow">TACTICAL COMMANDER</p>
+      <p class="eyebrow">MILITARY OPS PLANNER</p>
       <h1>TEAM TAKE OFF</h1>
-      <p class="sub">Valorant tactical comp manager. Double sentinel meta, recommended comps per map, full agent portrait picker, lock history, and saved strats.</p>
+      <p class="sub">A bad-ass red, black, and gold tactical planner for building VALORANT comps, weekly team schedules, day-based lock-ins, and mission-ready agent picks.</p>
     </div>
     <div class="status-card">
-      <span id="lockBadge" class="badge unlocked">Unlocked</span>
-      <strong id="matchTitle">New Match</strong>
-      <small id="matchMeta" class="mini">Pick a map, choose 5, lock your comp.</small>
+      <span id="lockBadge" class="badge unlocked">UNLOCKED</span>
+      <strong id="matchTitle">TEAM TAKE OFF</strong>
+      <small id="matchMeta" class="mini">Select a map, choose your five, assign agents, and lock the operation.</small>
     </div>
   </header>
 
   <main class="app-shell">
     <section class="panel wide">
       <div class="panel-head">
-        <h2>📅 Match Setup</h2>
-        <button id="newMatchBtn" class="ghost">New Match</button>
+        <h2>🎯 Match Setup</h2>
+        <button id="newMatchBtn" class="ghost">New Operation</button>
       </div>
-      <div class="form-grid">
+      <div class="form-grid five-col">
         <label>Opponent<input id="opponent" placeholder="Enemy team" /></label>
         <label>Date<input id="matchDate" type="date" /></label>
         <label>Time<input id="matchTime" type="time" /></label>
@@ -44,7 +45,7 @@
 
     <section class="panel">
       <div class="panel-head">
-        <h2>👥 Choose 5 Players</h2>
+        <h2>👥 Starting Five</h2>
         <span id="playerCount" class="mini"></span>
       </div>
       <div id="playerGrid" class="player-grid"></div>
@@ -62,15 +63,15 @@
 
     <section class="panel wide">
       <div class="panel-head">
-        <h2>🎮 Agent Select</h2>
+        <h2>🎮 Agent Assignments</h2>
         <div class="tools">
-          <input id="agentSearch" placeholder="Search agents (e.g. clove, chamber)" />
+          <input id="agentSearch" placeholder="Search agents (e.g. chamber, raze, omen)" />
           <select id="roleFilter"><option value="All">All Roles</option><option>Duelist</option><option>Initiator</option><option>Controller</option><option>Sentinel</option></select>
         </div>
       </div>
       <div id="lineupGrid" class="lineup-grid"></div>
       <div class="lock-row">
-        <button id="lockBtn" class="danger">🔒 Lock Comp + Save History</button>
+        <button id="lockBtn" class="danger">🔒 Lock Match Comp</button>
         <button id="unlockBtn" class="ghost">Unlock</button>
         <button id="copyBtn" class="secondary">📋 Copy Discord Summary</button>
       </div>
@@ -78,15 +79,24 @@
 
     <section class="panel wide">
       <div class="panel-head">
-        <h2>🗺️ Recommended Map Comp</h2>
+        <h2>🗺️ Recommended Double Sentinel Comp</h2>
         <span id="mapNote" class="mini"></span>
       </div>
       <div id="recommendedGrid" class="recommended-grid"></div>
       <div class="panel-head tips-head">
-        <h2>📝 Map Notes</h2>
+        <h2>📝 Tactical Notes</h2>
       </div>
       <ul id="mapTips" class="tips-list"></ul>
-      <p class="hint">Double Sentinel meta for strong site lockdown &amp; post-plant. Recommended comps are starting points for your strat. You can still choose any agent. No duplicates allowed. App warns instead of forcing meta.</p>
+      <p class="hint">Recommendations are tailored toward your requested double-sentinel style where possible, with Raze emphasized on key maps and Chamber prioritized on Ascent, Split, and Fracture per your preference.</p>
+    </section>
+
+    <section class="panel wide">
+      <div class="panel-head">
+        <h2>📅 Weekly Lock-In Planner</h2>
+        <button id="saveWeeklyBtn" class="secondary">Save Weekly Plan</button>
+      </div>
+      <p class="hint">Pick any two days each week, select your five players for each day, choose their agents, and lock those schedules separately.</p>
+      <div id="weeklyPlanner" class="weekly-grid"></div>
     </section>
 
     <section class="panel wide">
