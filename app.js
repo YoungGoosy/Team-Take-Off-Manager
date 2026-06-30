@@ -1,8 +1,8 @@
-const TEAM = ["Young_Goosy", "Kaji", "Toon", "Eternal", "Jolteon", "Menkyo", "White Toe"];
+const TEAM = ["Young_Goosy", "Eternal", "Reyna", "Toe", "Kaji", "Chain", "Toon"];
 const MAPS = ["Abyss", "Ascent", "Bind", "Breeze", "Corrode", "Fracture", "Haven", "Icebox", "Lotus", "Pearl", "Split", "Sunset"];
 
 const FALLBACK_AGENTS = [
-  ["Astra","Controller"],["Breach","Initiator"],["Brimstone","Controller"],["Chamber","Sentinel"],["Clove","Controller"],["Cypher","Sentinel"],["Deadlock","Sentinel"],["Fade","Initiator"],["Gekko","Initiator"],["Harbor","Controller"],["Iso","Duelist"],["Jett","Duelist"],["KAY/O","Initiator"],["Killjoy","Sentinel"],["Miks","Controller"],["Neon","Duelist"],["Omen","Controller"],["Phoenix","Duelist"],["Raze","Duelist"],["Reyna","Duelist"],["Sage","Sentinel"],["Skye","Initiator"],["Sova","Initiator"],["Tejo","Initiator"],["Veto","Sentinel"],["Viper","Controller"],["Vyse","Sentinel"],["Waylay","Duelist"],["Yoru","Duelist"]
+  ["Astra","Controller"],["Breach","Initiator"],["Brimstone","Controller"],["Chamber","Sentinel"],["Clove","Controller"],["Cypher","Sentinel"],["Deadlock","Sentinel"],["Fade","Initiator"],["Gekko","Initiator"],["Harbor","Controller"],["Iso","Duelist"],["Jett","Duelist"],["KAY/O","Initiator"],["Killjoy","Sentinel"],["Neon","Duelist"],["Omen","Controller"],["Phoenix","Duelist"],["Raze","Duelist"],["Reyna","Duelist"],["Sage","Sentinel"],["Skye","Initiator"],["Sova","Initiator"],["Tejo","Initiator"],["Viper","Controller"],["Vyse","Sentinel"],["Waylay","Duelist"],["Yoru","Duelist"]
 ].map(([displayName, role]) => ({ displayName, role, displayIcon: "", fullPortrait: "" }));
 
 const RECOMMENDED = {
@@ -23,16 +23,16 @@ const RECOMMENDED = {
 const DEFAULT_PREFS = {
   Young_Goosy: ["Killjoy", "Cypher", "Vyse"],
   Kaji: ["Fade", "Sova", "Gekko"],
-  Menkyo: ["Jett", "Neon", "Raze"],
+  Chain: ["Jett", "Neon", "Raze"],
   Toon: ["Chamber", "Cypher", "Omen"],
   Eternal: ["Chamber", "Omen", "Cypher"],
-  Jolteon: ["Omen", "Gekko", "Sova"],
-  "White Toe": ["Breach", "Clove", "Raze"]
+  Reyna: ["Omen", "Gekko", "Sova"],
+  Toe: ["Breach", "Clove", "Raze"]
 };
 
 let agents = FALLBACK_AGENTS;
 let state = {
-  selectedPlayers: ["Young_Goosy", "Kaji", "Toon", "Eternal", "Menkyo"],
+  selectedPlayers: ["Young_Goosy", "Kaji", "Toon", "Eternal", "Reyna"],
   lineup: {}, locked:false, activePlayer:null
 };
 
@@ -119,7 +119,7 @@ function loadRecommended(){
   const rec = RECOMMENDED[$("mapSelect").value]?.comp || [];
   state.lineup = {};
   const players = [...state.selectedPlayers];
-  const priority = ["Young_Goosy", "Menkyo", "Kaji", "Toon", "Eternal", "Jolteon", "White Toe"];
+  const priority = ["Young_Goosy", "Chain", "Kaji", "Toon", "Eternal", "Reyna", "Toe"];
   const sortedPlayers = players.sort((a,b)=>priority.indexOf(a)-priority.indexOf(b));
   rec.forEach((agent,i)=>{ if(sortedPlayers[i]) state.lineup[sortedPlayers[i]] = agent; });
   renderAll(); toast("Recommended comp loaded");
@@ -220,7 +220,7 @@ function renderHistory(){
   </div>`).join("") : `<p class="hint">No locked comps yet. Lock your first comp to save it here.</p>`;
 }
 async function copySummary(){
-  const text = `YG PREMIER COMP\n${$("eventType").value} vs ${$("opponent").value || "TBD"}\n${$("mapSelect").value} • ${$("matchDate").value} ${$("matchTime").value}\n\n${state.selectedPlayers.map(p=>`${p}: ${state.lineup[p] || "Open"}`).join("\n")}\n\nBench: ${TEAM.filter(p=>!state.selectedPlayers.includes(p)).join(", ") || "None"}`;
+  const text = `YG PREMIER COMP\n${$("eventType").value} vs ${$("opponent").value || "TBD"}\n${$("mapSelect").value} • ${$("matchDate").value} ${$("matchTime").value}\n\n${state.selectedPlayers.map(p=>`${p}: ${state.lineup[p]||"Open Pick"}`).join("\n")}\n\nMeta Score: ${metaScore()}%`;
   try{ await navigator.clipboard.writeText(text); toast("Discord summary copied"); }catch{ prompt("Copy this:", text); }
 }
 init();
