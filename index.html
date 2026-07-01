@@ -21,21 +21,21 @@
       --border-hover: rgba(212, 175, 55, 0.4);
     }
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: 'Courier New', monospace; color: var(--text); background: linear-gradient(135deg, #0a0a0a 0%, #1a0a05 50%, #0f0a0a 100%); min-height: 100vh; position: relative; overflow-x: hidden; }
-    body::before { content: ""; position: fixed; inset: 0; background-image: linear-gradient(0deg, transparent 24%, rgba(212, 175, 55, 0.05) 25%, rgba(212, 175, 55, 0.05) 26%, transparent 27%, transparent 74%, rgba(212, 175, 55, 0.05) 75%, rgba(212, 175, 55, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(212, 175, 55, 0.05) 25%, rgba(212, 175, 55, 0.05) 26%, transparent 27%, transparent 74%, rgba(212, 175, 55, 0.05) 75%, rgba(212, 175, 55, 0.05) 76%, transparent 77%, transparent); background-size: 50px 50px; pointer-events: none; z-index: 1; }
-    body::after { content: ""; position: fixed; inset: 0; background: radial-gradient(circle at 20% 50%, rgba(204, 0, 0, 0.1), transparent 50%), radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.08), transparent 50%); pointer-events: none; z-index: 0; }
+    body { margin: 0; font-family: 'Courier New', monospace; color: var(--text); background: linear-gradient(135deg, #0a0a0a 0%, #1a0a05 50%, #0f0a0a 100%); min-height: 100vh; position: relative; [...]
+    body::before { content: ""; position: fixed; inset: 0; background-image: linear-gradient(0deg, transparent 24%, rgba(212, 175, 55, 0.05) 25%, rgba(212, 175, 55, 0.05) 26%, transparent 27%, tra[...]
+    body::after { content: ""; position: fixed; inset: 0; background: radial-gradient(circle at 20% 50%, rgba(204, 0, 0, 0.1), transparent 50%), radial-gradient(circle at 80% 50%, rgba(212, 175, 5[...]
     header, main { position: relative; z-index: 2; }
-    .hero { display: flex; gap: 30px; justify-content: space-between; align-items: stretch; padding: 40px; max-width: 1400px; margin: 0 auto; border-bottom: 2px solid var(--gold); box-shadow: inset 0 -20px 40px rgba(212, 175, 55, 0.1); }
+    .hero { display: flex; gap: 30px; justify-content: space-between; align-items: stretch; padding: 40px; max-width: 1400px; margin: 0 auto; border-bottom: 2px solid var(--gold); box-shadow: inse[...]
     .eyebrow { margin: 0 0 12px; color: var(--gold); letter-spacing: 0.3em; font-weight: 900; font-size: 0.9rem; text-transform: uppercase; text-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
-    .hero h1 { font-size: clamp(2.5rem, 7vw, 6rem); line-height: 1; margin: 0; text-transform: uppercase; letter-spacing: -0.03em; text-shadow: 0 0 30px rgba(212, 175, 55, 0.3), 0 0 60px rgba(204, 0, 0, 0.2); color: #f5f5f5; }
+    .hero h1 { font-size: clamp(2.5rem, 7vw, 6rem); line-height: 1; margin: 0; text-transform: uppercase; letter-spacing: -0.03em; text-shadow: 0 0 30px rgba(212, 175, 55, 0.3), 0 0 60px rgba(204,[...]
     .sub { color: var(--text-muted); max-width: 700px; margin-top: 15px; font-size: 0.95rem; line-height: 1.4; }
-    .status-card, .auth-card { background: var(--panel-light); border: 2px solid var(--gold); box-shadow: 0 0 20px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(212, 175, 55, 0.05); backdrop-filter: blur(10px); border-radius: 8px; padding: 24px; }
+    .status-card, .auth-card { background: var(--panel-light); border: 2px solid var(--gold); box-shadow: 0 0 20px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(212, 175, 55, 0.05); backdrop-filter[...]
     .status-card { display: flex; flex-direction: column; gap: 12px; min-width: 280px; text-align: center; }
     .badge { width: max-content; margin: 0 auto; border-radius: 4px; padding: 8px 16px; font-weight: 900; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; }
     .unlocked { background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 1px solid var(--gold); }
     .locked { background: rgba(204, 0, 0, 0.2); color: var(--red-accent); border: 1px solid var(--red-accent); }
     .app { position: relative; max-width: 1400px; margin: 0 auto 40px; padding: 0 40px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 20px; }
-    .panel { background: var(--panel); border: 1px solid var(--border); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(212, 175, 55, 0.05); backdrop-filter: blur(10px); border-radius: 8px; padding: 24px; }
+    .panel { background: var(--panel); border: 1px solid var(--border); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(212, 175, 55, 0.05); backdrop-filter: blur(10px); border-rad[...]
     .wide { grid-column: 1 / -1; }
     .head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
     .head h2 { margin: 0; font-size: 1.15rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; }
@@ -43,8 +43,8 @@
     .form-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 18px; }
     .auth-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
     label { display: flex; flex-direction: column; gap: 8px; color: var(--text-muted); font-size: 0.8rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; }
-    input, select { width: 100%; border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 4px; padding: 12px; outline: none; font-family: 'Courier New', monospace; }
-    button { border: 1px solid var(--gold); border-radius: 4px; padding: 12px 18px; font-weight: 900; color: var(--bg); background: linear-gradient(135deg, var(--gold), var(--gold-light)); cursor: pointer; font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; }
+    input, select { width: 100%; border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 4px; padding: 12px; outline: none; font-family: 'Courier New', monospace[...]
+    button { border: 1px solid var(--gold); border-radius: 4px; padding: 12px 18px; font-weight: 900; color: var(--bg); background: linear-gradient(135deg, var(--gold), var(--gold-light)); cursor:[...]
     button.secondary { background: transparent; color: var(--gold); }
     button.ghost { background: transparent; color: var(--gold); border: 1px solid var(--border); }
     button.danger { background: linear-gradient(135deg, var(--red), var(--red-dark)); color: #fff; border-color: var(--red-accent); }
@@ -69,7 +69,7 @@
     .stat { padding: 16px; border-radius: 4px; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--border); text-align: center; }
     .stat strong { display: block; font-size: 2rem; color: var(--gold); margin-bottom: 4px; }
     .warnings { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
-    .warn { border: 1px solid rgba(212, 175, 55, 0.4); background: rgba(212, 175, 55, 0.08); color: var(--gold); border-radius: 3px; padding: 8px 12px; font-size: 0.8rem; font-weight: 900; text-transform: uppercase; }
+    .warn { border: 1px solid rgba(212, 175, 55, 0.4); background: rgba(212, 175, 55, 0.08); color: var(--gold); border-radius: 3px; padding: 8px 12px; font-size: 0.8rem; font-weight: 900; text-tr[...]
     .good { border-color: rgba(107, 255, 158, 0.3); background: rgba(107, 255, 158, 0.08); color: #6bff9e; }
     .recommended, .history { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
     .rec, .hist { padding: 14px; border: 1px solid var(--border); background: rgba(212, 175, 55, 0.05); border-radius: 4px; }
@@ -86,15 +86,15 @@
     .agent-card img { width: 100%; height: 120px; object-fit: contain; }
     .agent-card b { display: block; margin-top: 6px; color: var(--gold); font-weight: 900; font-size: 0.85rem; }
     .agent-card span { color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 2px; }
-    .toast { position: fixed; right: 20px; bottom: 20px; background: var(--panel-light); border: 2px solid var(--gold); border-radius: 4px; padding: 14px 18px; opacity: 0; transform: translateY(20px); transition: all 0.3s ease; z-index: 1000; color: var(--gold); font-weight: 900; text-transform: uppercase; font-size: 0.85rem; }
+    .toast { position: fixed; right: 20px; bottom: 20px; background: var(--panel-light); border: 2px solid var(--gold); border-radius: 4px; padding: 14px 18px; opacity: 0; transform: translateY(20[...]
     .toast.show { opacity: 1; transform: translateY(0); }
     .hint { color: var(--text-muted); font-size: 0.85rem; margin-top: 12px; padding: 12px; border-left: 2px solid var(--gold); background: rgba(212, 175, 55, 0.05); border-radius: 2px; }
     .tools { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
     .tools input, .tools select { flex: 1; min-width: 150px; }
     .hidden { display: none !important; }
     @media (max-width: 1200px) { .form-grid { grid-template-columns: repeat(3, 1fr); } .stats { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 900px) { .hero, .app { padding: 20px; } .hero { flex-direction: column; gap: 20px; } .app { grid-template-columns: 1fr; } .form-grid, .auth-grid { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 2.5rem; } }
-    @media (max-width: 520px) { .form-grid, .auth-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 2rem; } .hero, .app { padding: 15px; } .agent-img { height: 140px; } .agent-img img { max-height: 140px; } .stats { grid-template-columns: 1fr; } }
+    @media (max-width: 900px) { .hero, .app { padding: 20px; } .hero { flex-direction: column; gap: 20px; } .app { grid-template-columns: 1fr; } .form-grid, .auth-grid { grid-template-columns: rep[...]
+    @media (max-width: 520px) { .form-grid, .auth-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 2rem; } .hero, .app { padding: 15px; } .agent-img { height: 140px; } .agent-img img { m[...]
   </style>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
@@ -193,7 +193,7 @@
     <span id="mapNote" class="mini"></span>
   </div>
   <div id="recommendedGrid" class="recommended"></div>
-  <p class="hint">Double Sentinel meta for strong site lockdown &amp; post-plant. Recommended comps are starting points for your strat. You can still choose any agent. No duplicates allowed. App warns instead of forcing meta.</p>
+  <p class="hint">Double Sentinel meta for strong site lockdown &amp; post-plant. Recommended comps are starting points for your strat. You can still choose any agent. No duplicates allowed. App [...]
 </section>
 
 <section class="panel wide">
@@ -221,7 +221,7 @@ const SUPABASE_URL = 'https://gxmydorjcihzjdpcgzwt.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_i1KFug9aO6hcx2hG2gel4Q_aeS4mWRY';
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
 
-const TEAM = ['Young_Goosy', 'Kaji', 'Toon', 'Eternal', 'Jolteon', 'Menkyo', 'White Toe'];
+const TEAM = ['Young_Goosy', 'Eternal', 'Reyna', 'Toe', 'Kaji', 'Chain', 'Toon'];
 const MAPS = ['Abyss', 'Ascent', 'Bind', 'Breeze', 'Corrode', 'Fracture', 'Haven', 'Icebox', 'Lotus', 'Pearl', 'Split', 'Sunset'];
 const FALLBACK_AGENTS = [
   ['Brimstone', 'Controller'], ['Viper', 'Controller'], ['Omen', 'Controller'], ['Killjoy', 'Sentinel'],
@@ -251,7 +251,7 @@ const COMPS = {
 let agents = [], selectedPlayers = TEAM.slice(0, 5), lineup = {}, locked = false, currentPicking = null;
 let currentUserId = null;
 const $ = id => document.getElementById(id);
-const saveLocal = () => localStorage.setItem('takeoff-state', JSON.stringify({ selectedPlayers, lineup, locked, opponent: $('opponent').value, date: $('matchDate').value, time: $('matchTime').value, event: $('eventType').value, map: $('mapSelect').value }));
+const saveLocal = () => localStorage.setItem('takeoff-state', JSON.stringify({ selectedPlayers, lineup, locked, opponent: $('opponent').value, date: $('matchDate').value, time: $('matchTime').val[...]
 function toast(msg) { const toastEl = $('toast'); toastEl.textContent = msg; toastEl.classList.add('show'); setTimeout(() => toastEl.classList.remove('show'), 2800); }
 function updateAuthUI(session) {
   const signedIn = !!session?.user;
@@ -287,7 +287,7 @@ async function loadAgents() {
   try {
     const response = await fetch('https://valorant-api.com/v1/agents?isPlayableCharacter=true');
     const json = await response.json();
-    agents = json.data.map(a => ({ displayName: a.displayName, role: a.role?.displayName || 'Unknown', displayIcon: a.displayIcon, fullPortrait: a.fullPortrait || a.displayIcon })).sort((a, b) => a.displayName.localeCompare(b.displayName));
+    agents = json.data.map(a => ({ displayName: a.displayName, role: a.role?.displayName || 'Unknown', displayIcon: a.displayIcon, fullPortrait: a.fullPortrait || a.displayIcon })).sort((a, b) =>[...]
   } catch (e) {
     console.error('Agent API error:', e);
     agents = FALLBACK_AGENTS;
@@ -314,7 +314,7 @@ function restoreLocal() {
 async function loadCloudState() { if (!currentUserId) return; await loadCloudComp(currentMap(), false); await loadCloudHistory(); }
 async function saveCloudComp() {
   if (!currentUserId) return toast('Please log in first');
-  const payload = { user_id: currentUserId, map: currentMap(), opponent: $('opponent').value || null, event: $('eventType').value || null, match_date: $('matchDate').value || null, match_time: $('matchTime').value || null, selected_players: selectedPlayers, lineup, locked };
+  const payload = { user_id: currentUserId, map: currentMap(), opponent: $('opponent').value || null, event: $('eventType').value || null, match_date: $('matchDate').value || null, match_time: $([...]
   const { error } = await supabaseClient.from('saved_comps').insert(payload);
   if (error) return toast(error.message);
   saveLocal();
@@ -339,7 +339,7 @@ async function loadCloudComp(map, showToast = true) {
 }
 async function saveCloudHistoryEntry() {
   if (!currentUserId) return;
-  const payload = { user_id: currentUserId, map: currentMap(), opponent: $('opponent').value || null, event: $('eventType').value || null, match_date: $('matchDate').value || null, match_time: $('matchTime').value || null, lineup };
+  const payload = { user_id: currentUserId, map: currentMap(), opponent: $('opponent').value || null, event: $('eventType').value || null, match_date: $('matchDate').value || null, match_time: $([...]
   const { error } = await supabaseClient.from('match_history').insert(payload);
   if (error) return toast(error.message);
 }
@@ -347,7 +347,7 @@ async function loadCloudHistory() {
   if (!currentUserId) return;
   const { data, error } = await supabaseClient.from('match_history').select('*').eq('user_id', currentUserId).order('created_at', { ascending: false }).limit(50);
   if (error) return toast(error.message);
-  $('historyList').innerHTML = data && data.length ? data.map(x => `<div class="hist"><b>${x.map} vs ${x.opponent || 'TBD'}</b><p class="mini">${x.match_date || ''} ${x.match_time || ''} • ${x.event || ''}</p>${Object.entries(x.lineup || {}).map(([p, a]) => `<div>${p} → ${a}</div>`).join('')}</div>`).join('') : '<p class="mini">No locked comps yet.</p>';
+  $('historyList').innerHTML = data && data.length ? data.map(x => `<div class="hist"><b>${x.map} vs ${x.opponent || 'TBD'}</b><p class="mini">${x.match_date || ''} ${x.match_time || ''} • ${x.[...]
 }
 async function clearCloudHistory() {
   if (!currentUserId) return;
@@ -356,11 +356,11 @@ async function clearCloudHistory() {
   $('historyList').innerHTML = '<p class="mini">No locked comps yet.</p>';
   toast('Cloud history cleared');
 }
-function agentByName(n) { return agents.find(a => a.displayName.toLowerCase() === String(n || '').toLowerCase()) || FALLBACK_AGENTS.find(a => a.displayName === n) || { displayName: n || 'Pick Agent', role: '', fullPortrait: '', displayIcon: '' }; }
+function agentByName(n) { return agents.find(a => a.displayName.toLowerCase() === String(n || '').toLowerCase()) || FALLBACK_AGENTS.find(a => a.displayName === n) || { displayName: n || 'Pick Age[...]
 function currentMap() { return $('mapSelect').value || MAPS[0]; }
 function renderPlayers() {
   $('playerCount').textContent = `${selectedPlayers.length}/5 active`;
-  $('playerGrid').innerHTML = TEAM.map(p => `<label class="player"><input type="checkbox" data-player="${p}" ${selectedPlayers.includes(p) ? 'checked' : ''} ${locked ? 'disabled' : ''}> <span>${p}</span></label>`).join('');
+  $('playerGrid').innerHTML = TEAM.map(p => `<label class="player"><input type="checkbox" data-player="${p}" ${selectedPlayers.includes(p) ? 'checked' : ''} ${locked ? 'disabled' : ''}> <span>${p[0]}</span> <strong>${p}</strong></label>`).join('');
   $('benchList').textContent = TEAM.filter(p => !selectedPlayers.includes(p)).join(', ') || 'None';
   document.querySelectorAll('[data-player]').forEach(cb => {
     cb.addEventListener('change', e => {
@@ -380,14 +380,14 @@ function renderLineup() {
   $('lineupGrid').innerHTML = selectedPlayers.map(p => {
     const agent = agentByName(lineup[p]);
     const img = agent.fullPortrait || agent.displayIcon;
-    return `<div class="slot ${locked ? 'locked-slot' : ''}"><div class="slot-top"><span class="slot-player">${p}</span><span class="role-pill">${agent.role || 'Open'}</span></div><div class="agent-img" data-pick="${p}">${img ? `<img src="${img}" alt="${agent.displayName}">` : `<div class="empty">Click to pick<br><b>${agent.displayName}</b></div>`}</div><div class="slot-bottom"><button class="secondary" data-pick="${p}">${agent.displayName || 'Pick Agent'}</button></div></div>`;
+    return `<div class="slot ${locked ? 'locked-slot' : ''}"><div class="slot-top"><span class="slot-player">${p}</span><span class="role-pill">${agent.role || 'Open'}</span></div><div class="age[...]
   }).join('');
   document.querySelectorAll('[data-pick]').forEach(el => el.addEventListener('click', () => openPicker(el.dataset.pick)));
 }
 function renderRecommended() {
   const comp = COMPS[currentMap()] || COMPS.Ascent;
   $('mapNote').textContent = comp.note;
-  $('recommendedGrid').innerHTML = comp.agents.map((name, i) => { const agent = agentByName(name); return `<div class="rec"><b>${i + 1}. ${agent.displayName}</b><span class="mini">${agent.role || ''}</span></div>`; }).join('');
+  $('recommendedGrid').innerHTML = comp.agents.map((name, i) => { const agent = agentByName(name); return `<div class="rec"><b>${i + 1}. ${agent.displayName}</b><span class="mini">${agent.role ||[...]
 }
 function renderStats() {
   const counts = { Duelist: 0, Controller: 0, Initiator: 0, Sentinel: 0 };
@@ -414,8 +414,8 @@ function renderHeader() {
   $('matchMeta').textContent = `${currentMap()} • ${$('eventType').value} • ${$('matchDate').value || 'No date'} ${$('matchTime').value || ''}`;
 }
 function renderAll() { renderHeader(); renderPlayers(); renderLineup(); renderRecommended(); renderStats(); saveLocal(); }
-function loadRecommended(doToast = true) { const comp = (COMPS[currentMap()] || COMPS.Ascent).agents; selectedPlayers.forEach((p, i) => lineup[p] = comp[i]); if (doToast) toast('Recommended comp loaded'); saveLocal(); renderAll(); }
-function openPicker(player) { if (locked) return toast('Unlock the comp first.'); currentPicking = player; $('modalTitle').textContent = `Pick Agent for ${player}`; $('agentSearch').value = ''; renderAgentGrid(); $('agentModal').showModal(); }
+function loadRecommended(doToast = true) { const comp = (COMPS[currentMap()] || COMPS.Ascent).agents; selectedPlayers.forEach((p, i) => lineup[p] = comp[i]); if (doToast) toast('Recommended comp [...]
+function openPicker(player) { if (locked) return toast('Unlock the comp first.'); currentPicking = player; $('modalTitle').textContent = `Pick Agent for ${player}`; $('agentSearch').value = ''; r[...]
 function renderAgentGrid() {
   const query = $('agentSearch').value.toLowerCase();
   const roleFilter = $('roleFilter').value;
@@ -425,8 +425,8 @@ function renderAgentGrid() {
     const matchesQuery = query === '' || a.displayName.toLowerCase().includes(query);
     return matchesRole && matchesQuery;
   });
-  if (filtered.length === 0) { $('agentGrid').innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 20px;">No agents found. Try different search terms.</p>'; return; }
-  $('agentGrid').innerHTML = filtered.map(a => { const disabled = used.has(a.displayName); return `<div class="agent-card ${disabled ? 'disabled' : ''}" data-agent="${a.displayName}">${a.displayIcon ? `<img src="${a.displayIcon}" alt="${a.displayName}">` : ''}<b>${a.displayName}</b><span>${disabled ? 'Already picked' : a.role}</span></div>`; }).join('');
+  if (filtered.length === 0) { $('agentGrid').innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 20px;">No agents found. Try different search terms.<[...]
+  $('agentGrid').innerHTML = filtered.map(a => { const disabled = used.has(a.displayName); return `<div class="agent-card ${disabled ? 'disabled' : ''}" data-agent="${a.displayName}">${a.displayI[...]
   document.querySelectorAll('[data-agent]').forEach(card => {
     card.addEventListener('click', () => {
       if (card.classList.contains('disabled')) return toast('That agent is already picked.');
@@ -436,7 +436,10 @@ function renderAgentGrid() {
     });
   });
 }
-function summary() { return `TEAM TAKE OFF - VALORANT LINEUP\n${$('eventType').value}${$('opponent').value ? ` vs ${$('opponent').value}` : ''}\nMap: ${currentMap()}\nDate: ${$('matchDate').value || 'TBD'} ${$('matchTime').value || ''}\n\n${selectedPlayers.map(p => `${p} - ${lineup[p] || 'OPEN'}`).join('\n')}\n\nBench/Subs: ${TEAM.filter(p => !selectedPlayers.includes(p)).join(', ') || 'None'}`; }
+function summary() { return `TEAM TAKE OFF - VALORANT LINEUP
+${$('eventType').value}${$('opponent').value ? ` vs ${$('opponent').value}` : ''}
+Map: ${currentMap()}
+Date: ${$('matchDate').value[...]
 function copySummary() {
   const text = summary();
   if (navigator.clipboard && window.isSecureContext) {
@@ -472,7 +475,7 @@ function bind() {
   $('unlockBtn').addEventListener('click', () => { locked = false; saveLocal(); renderAll(); toast('Unlocked'); });
   $('copyBtn').addEventListener('click', copySummary);
   $('clearHistoryBtn').addEventListener('click', clearCloudHistory);
-  $('newMatchBtn').addEventListener('click', () => { locked = false; lineup = {}; $('opponent').value = ''; $('matchDate').value = ''; $('matchTime').value = ''; $('eventType').value = 'Scrim'; saveLocal(); renderAll(); toast('New match started'); });
+  $('newMatchBtn').addEventListener('click', () => { locked = false; lineup = {}; $('opponent').value = ''; $('matchDate').value = ''; $('matchTime').value = ''; $('eventType').value = 'Scrim'; s[...]
   $('closeModal').addEventListener('click', () => $('agentModal').close());
   $('agentSearch').addEventListener('input', () => renderAgentGrid());
   $('roleFilter').addEventListener('change', () => renderAgentGrid());
